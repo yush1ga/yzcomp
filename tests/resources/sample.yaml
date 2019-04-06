@@ -1,0 +1,53 @@
+name: dummy
+description: dummy command
+arguments:
+  - name: sub
+    description: normal sub command
+  - name: opt
+    description: sub command with option
+    options:
+      - names:
+          - '-m'
+          - '--message'
+        description: sample option 1
+      - names:
+          - '--amend'
+        description: sample option 2
+  - name: func
+    description: sub command with function args
+    arguments: _func
+  - name: subdeep
+    description: sub command wich has deep sub commands
+    arguments:
+      - name: fuga
+        arguments:
+          - name: piyo
+            arguments:
+              - name: foo
+  - name: strarg
+    description: sub command with str arguments
+    arguments:
+      - hoge
+      - fuga
+      - piyo
+options:
+  - names:
+      - --argopt
+      - -a
+    description: option with str arguments
+    arguments:
+      - hoge
+      - fuga
+      - piyo
+  - names:
+      - --func
+    description: option with func arguments
+    arguments: _func
+
+shell: |
+  function _func(){
+    _values \
+      values \
+      foo \
+      bar \
+  }
