@@ -1,4 +1,5 @@
-BODY = '''
+BODY = '''#compdef {{name}}
+
 function _{{name}}(){
   local context curcontext="$curcontext" state line
   typeset -A opt_args

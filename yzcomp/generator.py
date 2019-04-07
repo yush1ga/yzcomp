@@ -95,5 +95,4 @@ class Generator:
         if self._shell:
             complete += f'\n{self._shell}'
 
-        return complete
-
+        return complete + f'\n\n_{self._command.name} "$@"'
