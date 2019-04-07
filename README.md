@@ -13,10 +13,10 @@ $ pip install git+https://github.com/yush1ga/yzcomp.git
 ## Usage
 
 Detailed description is coming soon.
-Sample yaml file is [here](https://github.com/yushiga/yzcomp/blob/master/tests/resource.sample.yaml) 
+Sample yaml file is [here](https://github.com/yush1ga/yzcomp/blob/master/tests/resources/sample.yaml) 
 
 ```zsh
-$ yzcomp <yaml file path>
+$ yzcomp $YAML_FILE_PATH
 ```
 
 ## Contribution
